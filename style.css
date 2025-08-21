@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+section {
+    border-radius: 0 0 15px 15px;
+}
+
+/* HOME */
+#home {
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    height: 140vh;
+    position: relative;
+}
+
+/* ABOUT */
+#about {
+    background: linear-gradient(135deg, #fff5e1, #ffc857);
+    /* soft blue gradient */
+}
+
+/* WORKS */
+.scroll-section {
+    background: linear-gradient(135deg, #ffd194, #d1913c);
+    /* greeny fresh gradient */
+}
+
+/* CONTACT */
+#contact {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    /* peach-pink gradient */
+}
+
+.work-p,
+.home_h1 {
+    font-family: "Protest Revolution", sans-serif;
+    /*font-weight: 400;
+    font-style: normal;*/
+    font-size: 120px;
+    position: relative;
+    z-index: 2;
+    top: 0%;
+    padding-left: 22%;
+}
+
+.home_p {
+    font-family: "Mynerve", cursive;
+    position: absolute;
+    left: 35%;
+    top: 70%;
+    z-index: 2;
+}
+
+.home_h2 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 400px;
+    color: rgb(235, 250, 215);
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    left: 18%;
+    top: 65%;
+    transform: translateY(-50%);
+}
+
+/* Section setup */
+#about {
+    position: relative;
+    height: 100vh;
+}
+
+.about-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Panels */
+.about-left {
+    position: absolute;
+    top: 0;
+    width: 110%;
+    height: 100vh;
+}
+
+.about-left {
+    left: 0;
+    background: linear-gradient(135deg, #fff7e6, #f9d423);
+    transition: all 1.5s ease;
+}
+
+.about-right {
+    position: absolute;
+    font-size: 400px;
+    color: rgb(206, 245, 245);
+    z-index: 8;
+    top: 10%;
+    left: 46.5%;
+    transition: opacity 0.8s ease 0.5s;
+}
+
+.about-text {
+    opacity: 0;
+    text-align: center;
+    position: relative;
+    transition: opacity 1s ease 0.5s;
+}
+
+.about-text h2 {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 100px;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-family: "Mynerve", cursive;
+    font-size: 60px;
+    margin-bottom: 2rem;
+}
+
+.close-btn {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: "Protest Revolution", sans-serif;
+    border-radius: 15px;
+    background-color: #a0c4ff;
+}
+
+/* Click box */
+.click-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    background-color: #fffa65;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    z-index: 8;
+    text-align: center;
+    overflow: visible;
+    position: absolute;
+    transition: opacity 0.8s ease 0.5s;
+    /* important so SVG isn’t clipped */
+}
+
+/* The main label text */
+.click-label {
+    position: relative;
+    z-index: 20;
+    /* ensures it's above the SVG */
+    display: block;
+    font-size: 30px;
+
+    font-family: "Mynerve", cursive;
+}
+
+/* Circle SVG */
+.circle-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    height: 380px;
+    transform: translate(-50%, -50%);
+    animation: rotate 15s linear infinite;
+    z-index: 5;
+    /* behind the label */
+}
+
+/* Smooth rotation */
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Active state: panels move apart */
+.about-container.active .about-left {
+    transform: translateX(-100%);
+}
+
+
+.about-container.active .about-text {
+    opacity: 1;
+}
+
+.about-container.active .click-box {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.about-container.active .about-right {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+/*works*/
+.scroll-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.scrollwrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.scrollitem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 10%;
+}
+
+.scrollitem:nth-child(1) {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.scrollitem:nth-child(2) {
+    background: linear-gradient(135deg, #c3ec52, #0ba29d);
+}
+
+.scrollitem:nth-child(3) {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+.illustration-card {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    display: flex;
+
+}
+
+/* Back image */
+.illustration-card .imgr {
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Front/overlapping image */
+.illustration-card .imgl {
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    left: -10%;
+    /* overlap effect */
+    bottom: 10%;
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Hover effects */
+.illustration-card:hover .imgr {
+    transform: translateX(15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.illustration-card:hover .imgl {
+    transform: translateX(-15px) scale(1.08);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.work-text {
+    margin: 80px;
+}
+
+.work-text h3 {
+    font-size: 2rem;
+    font-family: "Protest Revolution", sans-serif;
+
+}
+
+.work-text p {
+    font-family: "Mynerve", cursive;
+}
+
+#contact {
+    font-family: "Protest Revolution", sans-serif;
+    /*font-weight: 400;
+        font-style: normal;*/
+    font-size: 80px;
+    top: 0%;
+    padding-left: 20%;
+}
+
+.contact-1 img {
+    position: absolute;
+    left: 25%;
+    width: 25%;
+    z-index: 1;
+    border-radius: 10%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.contact-1 h1,
+.contact-1 h2 {
+    z-index: 4;
+    position: relative;
+    pointer-events: none;
+    user-select: none;
+    pointer-events: none;
+    user-select: none;
+}
+
+.contact-1 h1 {
+    position: relative;
+    top: 12%;
+    /* left: -10px;*/
+}
+
+.contact-1 h2 {
+    position: relative;
+    top: 45%;
+}
+
+.contact-me {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    font-size: 30px;
+    position: absolute;
+    background-color: #fff;
+    font-family: "Mynerve", cursive;
+    border: none;
+    left: 55%;
+    top: 30%;
+    rotate: -25deg;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-me:hover {
+    rotate: 0deg;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contact-2 {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*contact.html*/
+/* Curved Section */
+.contact_hero {
+    margin-top: 10%;
+    border-top-left-radius: 50% 550px;
+    border-top-right-radius: 50% 550px;
+    background-color: #d1f3ff;
+    padding: 2rem 2rem;
+    align-items: center;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.hero_contact {
+    position: relative;
+}
+
+.hero_contact img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.5s ease;
+}
+
+.hero_contact img:hover {
+    transform: scale(1.05);
+}
+
+.contact_img {
+    border-top-left-radius: 50% 350px;
+    border-top-right-radius: 50% 350px;
+    background: linear-gradient(to bottom, #a1a9ff, #d1f3ff);
+    width: 50%;
+    height: 90vh;
+    left: 25%;
+    position: absolute;
+    top: 30%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.media_button {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.contacts {
+    top: 20%;
+}
+
+
+.heading_h1 {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 100px;
+    padding-bottom: 30px;
+}
+
+.mail {
+    height: 70vh;
+    font-family: "Mynerve", cursive;
+    font-size: 40px;
+    text-align: center;
+}
