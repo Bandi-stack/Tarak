@@ -565,7 +565,7 @@ section {
     .home_h2 {
         font-size: 180px;
         left: 0%;
-        top: 76%;
+        top: 66%;
     }
 
     .about-text h2 {
@@ -773,5 +773,6 @@ section {
         gap: 40px;
         margin-top: 2rem;
     }
+
 
 }
