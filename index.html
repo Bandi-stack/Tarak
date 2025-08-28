@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Felipa&family=Matemasie&family=Protest+Revolution&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <section id="home">
+                <div class="home_sec">
+                    <h1 class="home_h1">Welcome to the <span style="padding-left: 20%;">world
+                        </span> <br> of <br><span style="padding-left: 20%;">Tarak</span>
+                    </h1>
+                    <p class="home_p">Hi I'm Tarak Surya Gangadhara Mutyala Raju, Frontend & Full
+                        Stack dev from India. <br> You can call me Tarak</p>
+                    <h2 class="home_h2">Dev</h2>
+                    <p class="scroll_p">scroll down to explore more </p>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="about-container">
+                    <div class="about-left"></div>
+                    <div class="about-right">i</div>
+                    <div class="about-text">
+                        <h2>More About Tarak</h2>
+                        <p>
+                            On my free time you can find me exploring new technlogies to add my stack, travelling to new
+                            places, exploring new dishes in cooking
+                        </p>
+                        <button class="close-btn">Close</button>
+                    </div>
+
+                    <div class="click-box">
+                        <span class="click-label">Click to know more <br> about me</span>
+
+                        <svg viewBox="0 0 200 200" class="circle-svg">
+                            <defs>
+                                <path id="circlePath" d="M 100, 100
+                               m -75, 0
+                               a 75,75 0 1,1 150,0
+                               a 75,75 0 1,1 -150,0" />
+                            </defs>
+
+                            <!-- Background circle -->
+                            <circle cx="100" cy="100" r="95" fill="#ffeaa7" />
+
+                            <!-- Rotating text -->
+                            <text font-size="16" font-weight="bold" fill="#333">
+                                <textPath href="#circlePath">
+                                    FULL STACK DEV · VIDEO EDITOR · FULL STACK DEV · VIDEO EDITOR ·
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <section id="works">
+                <p class="work-p">
+                    Full stack brains <br>
+                    frontend beauty <br> and 3D magic <br> — all in one</p>
+
+                <section class="scroll-section vertical-section">
+                    <div class="scrollwrapper">
+                        <div class="scrollitem">
+                            <div class="illustration-card">
+                                <img src="cr1.jpg" alt="Back Image" class="imgr">
+
+                            </div>
+                            <div class="work-text">
+                                <h3>CRUD Applications</h3>
+                                <p> Apps that let you Create, Read, Update, and Delete data with ease</p>
+                                <ul style="list-style: none;">
+                                    <li>Authentication & User Management</li>
+                                    <li>Database Integration (Mongo)</li>
+                                    <li>Secure APIs</li>
+                                </ul>
+                                <a href="crud.html" class="work-btn">See Projects</a>
+                            </div>
+                        </div>
+                        <div class="scrollitem">
+
+                            <div class="illustration-card">
+                                <img src="fr2.jpg" alt="Back Image" class="imgr">
+
+                            </div>
+                            <div class="work-text">
+                                <h3>Frontend Applications</h3>
+                                <p>Crafting beautiful, interactive user experiences in the browser</p>
+                                <ul style="list-style: none;">
+                                    <li>React</li>
+                                    <li>Animations & Micro-interactions</li>
+                                    <li>Responsive Mobile-first Design</li>
+                                </ul>
+                                <a href="frontend.html" class="work-btn">See Projects</a>
+                            </div>
+                        </div>
+                        <div class="scrollitem">
+                            <div class="illustration-card">
+                                <img src="3d2.jpg" alt="Back Image" class="imgr">
+
+                            </div>
+                            <div class="work-text">
+                                <h3>3d Websites</h3>
+                                <ul style="list-style: none;">
+                                    <li>Three.js & WebGL</li>
+                                    <li>3D Animations & Models</li>
+                                    <li>Interactive User Journeys</li>
+                                </ul>
+                                <p>Bringing ideas to life with immersive, interactive 3D visuals</p>
+                                <a href="threed.html" class="work-btn">See Projects</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section id="contact">
+                <div class="contact-1">
+                    <h1>Got a thought? </h1>
+                    <div class="contact-img">
+                        <img src="me.png" alt="">
+                    </div>
+                    <h2>A Hello is the best start.</h2>
+                    <a href="contact.html"> <button class="contact-me"> Contact me? </button></a>
+                </div>
+
+                <div class="contact-2">
+                    <h2 style="padding-top: 20%;">let’s connect</h2>
+                    <div class="social-media">
+                        <a style="color: #000; text-decoration: none;"
+                            href="https://instagram.com/Tarak1978raj">Instagram</a>
+                        <a style="color: #000; text-decoration: none;" href="https://wa.me/9177134119">WhatsApp</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <p style="font-size: 4px;">inspired by chungi yoo</p>
+
+    <!-- GSAP + ScrollTrigger + ScrollSmoother -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.36/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!-- 
+      <svg class="arrow" viewBox="0 0 160 100" aria-hidden="true">
+        <path d="M5,90 C40,10 120,20 150,70" />
+        <path d="M145,60 L150,70 L137,68" />
+      </svg>
+    .arrow{
+    position:absolute; right:145px; bottom:95px; width:140px; height:80px; pointer-events:none;
+    opacity:0; animation:fadeUp .9s .8s both cubic-bezier(.2,.7,.2,1);
+    }
+    .arrow path{stroke:var(--ink); stroke-width:2.5; fill:none; stroke-linecap:round}
+-->
